@@ -32,6 +32,14 @@ public class WhatsappRepository {
     //Message count
     private int messageCount=0;
 
+    public WhatsappRepository() {
+        this.userHashMap = new HashMap<>();
+        this.groupHashMap = new HashMap<>();
+        this.messages = new HashMap<>();
+        this.groupMessage = new HashMap<>();
+        this.userMessage = new HashMap<>();
+    }
+
     public String createUser(String name, String mobile) throws Exception{
         //exception
         User user = new User(mobile, name);
